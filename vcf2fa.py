@@ -16,7 +16,7 @@
 
 
 print("################################################################################ \n"
-      "################################ SU IS COOL! ################################### \n"
+      "############################ lagartixas in silico ############################## \n"
       "################################################################################")
 
 #### INPUT FILE 1
@@ -45,7 +45,7 @@ for line in seqfa:
         seqlen = len(seq)
         dicref[seqname.rstrip()] = seqlen
         # created a dictionary with the name of each marker and respective length
-#print dicref
+
 # make a dictionary for the redundant bases (to make consensus seq)
 redundant = {'AG': 'R', 'GA': 'R', 'CT': 'Y', 'TC': 'Y', 'AC': 'M', 'CA': 'M', 'GC': 'S', 'CG': 'S', 'AT': 'W',
              'TA': 'W', 'GT': 'K', 'TG': 'K'}
@@ -82,11 +82,9 @@ for line in lines:
                     snp.append(ref)
                 if nuc[0] == '1/0':
                     com = ref + alt
-                    # print(com) # working!!!
                     snp.append(redundant.get(com))  # call the dictionary for heterozygous positions
                 if nuc[0] == '0/1':
                     com = alt + ref
-                    # print(com) # working!!!
                     snp.append(redundant.get(com))  # call the dictionary for heterozygous positions
                 if nuc[0] == '1/1':
                     snp.append(alt)
@@ -99,7 +97,6 @@ for line in lines:
                     snp.append(ref)
                 if nuc[0] == '1|0':
                     com = ref + alt
-                    # print(com) # working!!!
                     snp.append(redundant.get(com))  # call the dictionary for heterozygous positions
                 if nuc[0] == '0|1':
                     com = alt + ref
@@ -112,8 +109,6 @@ for line in lines:
             elif count == 1:
                 # for a in range(0,1,1):
                     all = alt.split(',')
-                    #print(all[0])
-                    #print(all[1])
                     if nuc[0] == '0/0':
                         snp.append(ref)
                     if nuc[0] == '1/0':
@@ -268,7 +263,6 @@ for line in lines:
                     if nuc[0] == '3|3':
                         snp.append(all[2])
             dici_matrix[keyname] = snp
-# print dici_matrix
 
 import io
 for key in dicref:  # iterate over the keys in the dictionary
