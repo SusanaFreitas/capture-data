@@ -1,5 +1,7 @@
+## made by susana freitas, Jun 2016 
+##
 ### SCRIPT TO REMOVE ENDLINES FROM FASTAFILES
-
+##
 ## usage:
 # python remove_endlines.py filename
 ## from system (terminal) import the arguments
