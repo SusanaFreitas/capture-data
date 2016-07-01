@@ -1,3 +1,12 @@
+### script made by susana freitas, Jun 2016
+### script using EggLib v 3.0.0b6 > http://mycor.nancy.inra.fr/egglib/index.html <
+## removes columns from fasta files with missing data (N) in more than 7 inds
+## produces three outputs:
+# fasta file with removed columns
+# nexus file
+# phy file
+
+
 import egglib
 import os
 print("###########################################################\n"
